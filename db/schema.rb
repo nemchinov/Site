@@ -11,11 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130908101905) do
+ActiveRecord::Schema.define(version: 20130909105429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "adminpack"
+
+  create_table "skills", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "vacancies", force: true do |t|
     t.string   "title"
@@ -28,5 +34,19 @@ ActiveRecord::Schema.define(version: 20130908101905) do
 
   add_index "vacancies", ["salary"], name: "index_vacancies_on_salary", using: :btree
   add_index "vacancies", ["title"], name: "index_vacancies_on_title", using: :btree
+
+  create_table "vacancy_skills", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "workers", force: true do |t|
+    t.string   "name"
+    t.string   "contacts"
+    t.boolean  "status"
+    t.float    "solaryDesire"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
