@@ -1,7 +1,8 @@
 class WorkersController < ApplicationController
   def index
-    @worker = Worker.all
-    render text: "Workers: <br/>" + @worker.map {|i| "#{i.name}: #{i.contacts}: #{i.status}: #{i.solaryDesire}"}.join("<br/>")
+    @workers = Worker.all
+
+    #render text: "Workers: <br/>" + @worker.map {|i| "#{i.name}: #{i.contacts}: #{i.status}: #{i.solaryDesire}"}.join("<br/>")
   end
 
   # /workers/workers POST
@@ -13,7 +14,11 @@ class WorkersController < ApplicationController
 
   # /workers/1 GET
   def show
-
+    if (@worker = Worker.where(id: params[:id]).first)
+      render "workers/show"
+    else
+      render text: "Page not found", status: 404
+    end
   end
 
   # /workers/1 PUT
