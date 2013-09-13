@@ -1,6 +1,11 @@
-<h1>Create new worker</h1>
-<form actoin="/workers" method="POST">
-    <input type="text" name="title"/>
-    <input type="submit"/>
-</form>
+<h1>Добавление нового работника</h1>
+
+<%= form_for Worker.new do |f| %>
+    <p>Имя: <br/> <%= f.text_field :name %></p>
+    <p>Контактные данные: <br/> <%= f.text_field :contacts %></p>
+    <p>Статус поиска работы: <br/> <%= f.text_field :status %></p>
+    <p>Желаемая зработная плата: <br/> <%= f.text_field :solaryDesire %></p>
+
+    <p><%= f.submit "Добавить работника" %></p>
+<% end %>
 

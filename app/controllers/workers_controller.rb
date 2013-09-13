@@ -8,7 +8,12 @@ class WorkersController < ApplicationController
   # /workers/workers POST
   def create
     @worker = Worker.create(name: params[:name],contacts: params[:contacts], status: params[:status], solaryDesire: params[:solaryDesire])
-    render text: "#{@worker.id}: #{@worker.name} (#{!@worker.new_record?})"
+    if @worker.errors.empty?
+      redirect_to worker_path(@worker)
+    else
+      render "new"
+    end
+    #render text: "#{@worker.id}: #{@worker.name} (#{!@worker.new_record?})"
     #http://localhost:3000/workers/create?name=Djon&contacts=USA&status=1&solarydesire=15000
   end
 
