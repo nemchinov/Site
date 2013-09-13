@@ -1,5 +1,6 @@
 Site::Application.routes.draw do
-  get ':controller(/:action(/:id))(.:format)'
+  resources :workers
+  #get ':controller(/:action(/:id))(.:format)'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

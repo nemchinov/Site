@@ -1,5 +1,8 @@
 class Skill < ActiveRecord::Base
-  attr_accessible :name
+  private
+  def app_params
+    params.require(:Skill).permit(:name)
+  end
   validates :name, {presence: true}
   validates :name, {uniqueness: true}
 end
