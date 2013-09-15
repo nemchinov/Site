@@ -1,6 +1,6 @@
 <h1>Добавление нового работника</h1>
 
-<%= form_for Worker.new do |f| %>
+<%= form_for (@worker) do |f| %>
     <p>Имя: <br/> <%= f.text_field :name %></p>
     <p>Контактные данные: <br/> <%= f.text_field :contacts %></p>
     <p>Статус поиска работы: <br/> <%= f.check_box :status %></p>

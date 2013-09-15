@@ -1,0 +1,5 @@
+<% @vacancy.each do |i| %>
+
+    <p><%= link_to i.title, vacancy_path(i) %></p>
+
+<% end %>

@@ -1,7 +1,6 @@
 class WorkersController < ApplicationController
   def index
     @workers = Worker.all
-
     #render text: "Workers: <br/>" + @worker.map {|i| "#{i.name}: #{i.contacts}: #{i.status}: #{i.solaryDesire}"}.join("<br/>")
   end
 
@@ -45,6 +44,6 @@ class WorkersController < ApplicationController
 
   # /workers/new GET
   def new
-
+      @worker=Worker.new
   end
 end

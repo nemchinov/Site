@@ -1,5 +1,7 @@
 Site::Application.routes.draw do
-  resources :workers
+  resources :workers, :vacancies
+  resources :skills
+
   #get ':controller(/:action(/:id))(.:format)'
 
   # The priority is based upon order of creation: first created -> highest priority.
