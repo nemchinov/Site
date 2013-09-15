@@ -1,5 +1,6 @@
-<h1>Edit skill</h1>
-<form actoin="/skill" method="POST">
-  <input type="text" name="title"/>
-  <input type="submit"/>
-</form>
+<h1>Изменение умения</h1>
+
+<%= form_for(@skill) do |f| %>
+    <p>Название: <br/> <%= f.text_field :name %></p>
+    <p><%= f.submit "Применить" %></p>
+<% end %>

@@ -1,5 +1,10 @@
-<h1>Edit vacancy</h1>
-<form actoin="/vacancy" method="POST">
-  <input type="text" name="title"/>
-  <input type="submit"/>
-</form>
+<h1>Изменение вакансии.</h1>
+
+<%= form_for (@vacancy) do |f| %>
+    <p>Название: <br/> <%= f.text_field :title %></p>
+    <p>Зарплата: <br/> <%= f.text_field :salary %></p>
+    <p>Продолжительность: <br/> <%= f.text_field :duration %></p>
+    <p>Информация: <br/> <%= f.text_field :information %></p>
+
+    <p><%= f.submit "Применить" %></p>
+<% end %>

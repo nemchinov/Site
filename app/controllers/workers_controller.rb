@@ -29,7 +29,14 @@ class WorkersController < ApplicationController
 
   # /workers/1 PUT
   def update
-
+    @worker = Worker.find(params[:id])
+    item_params = params.require(:worker).permit(:name,:contacts,:status,:solaryDesire)
+    @worker.update_attributes(item_params)
+    if @worker.errors.empty?
+      redirect_to worker_path(@worker)
+    else
+      render "edit"
+    end
   end
 
   # /workers/1 DELETE
@@ -39,7 +46,7 @@ class WorkersController < ApplicationController
 
   # /workers/edit GET
   def edit
-
+     @worker = Worker.find(params[:id])
   end
 
   # /workers/new GET

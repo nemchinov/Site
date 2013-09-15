@@ -25,7 +25,14 @@ class SkillsController < ApplicationController
 
   # /skills/1 PUT
   def update
-
+    @skill = Skill.find(params[:id])
+    item_params = params.require(:skill).permit(:name)
+    @skill.update_attributes(item_params)
+    if @skill.errors.empty?
+      redirect_to skill_path(@skill)
+    else
+      render "edit"
+    end
   end
 
   # /skills/1 DELETE
@@ -35,7 +42,7 @@ class SkillsController < ApplicationController
 
   # /skills/edit GET
   def edit
-
+    @skill = Skill.find(params[:id])
   end
 
   # /skills/new GET

@@ -25,7 +25,14 @@ class VacanciesController < ApplicationController
 
   # /vacancy/1 PUT
   def update
-
+    @vacancy = Vacancy.find(params[:id])
+    item_params = params.require(:vacancy).permit(:title, :salary, :duration, :information)
+    @vacancy.update_attributes(item_params)
+    if @vacancy.errors.empty?
+      redirect_to vacancy_path(@vacancy)
+    else
+      render "edit"
+    end
   end
 
   # /vacancy/1 DELETE
@@ -35,7 +42,7 @@ class VacanciesController < ApplicationController
 
   # /vacancy/edit GET
   def edit
-
+    @vacancy = Vacancy.find(params[:id])
   end
 
   # /vacancy/new GET

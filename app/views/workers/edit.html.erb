@@ -1,5 +1,10 @@
-<h1>Edit worker</h1>
-<form actoin="/workers" method="POST">
-  <input type="text" name="title"/>
-  <input type="submit"/>
-</form>
+<h1>Изменение данных работника</h1>
+
+<%= form_for (@worker) do |f| %>
+    <p>Имя: <br/> <%= f.text_field :name %></p>
+    <p>Контактные данные: <br/> <%= f.text_field :contacts %></p>
+    <p>Статус поиска работы: <br/> <%= f.check_box :status %></p>
+    <p>Желаемая зработная плата: <br/> <%= f.text_field :solaryDesire %></p>
+
+    <p><%= f.submit "Применить" %></p>
+<% end %>
