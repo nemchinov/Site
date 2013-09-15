@@ -41,7 +41,9 @@ class WorkersController < ApplicationController
 
   # /workers/1 DELETE
   def destroy
-
+    @worker=Worker.find(params[:id])
+    @worker.destroy
+    redirect_to action: "index"
   end
 
   # /workers/edit GET

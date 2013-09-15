@@ -1,5 +1,22 @@
-<% @skill.each do |i| %>
+<h1>Умения</h1>
 
-    <p><%= link_to i.name, skill_path(i) %></p>
+<% if @skill.nil? %>
+    <b>В базе нет ни одного умения.</b>
+<% else %>
+    <table>
+      <tr>
+        <th>№</th>
+        <th>Название</th>
+        <th></th>
+      </tr>
+      <% @skill.each do |i| %>
 
+          <tr>
+            <td><%= i.id %></td>
+            <td><%= link_to i.name, skill_path(i) %></td>
+            <td><%= link_to "Удалить", i, method: :delete, data: {confirm: "Удалить?"} %></td>
+          </tr>
+
+      <% end %>
+    </table>
 <% end %>

@@ -37,7 +37,9 @@ class SkillsController < ApplicationController
 
   # /skills/1 DELETE
   def destroy
-
+    @skill=Skill.find(params[:id])
+    @skill.destroy
+    redirect_to action: "index"
   end
 
   # /skills/edit GET

@@ -1,5 +1,24 @@
-<% @workers.each do |i| %>
+<h1>Работники</h1>
 
-    <p><%= link_to i.name, worker_path(i) %></p>
+<% if @workers.nil? %>
+    <b>В базе нет ни одного работника.</b>
+<% else %>
+    <table>
+      <tr>
+        <th>№</th>
+        <th>Имя</th>
+        <th>Статус</th>
+        <th></th>
+      </tr>
+      <% @workers.each do |i| %>
 
+          <tr>
+            <td><%= i.id %></td>
+            <td><%= link_to i.name, worker_path(i) %></td>
+            <td><%= i.status %></td>
+            <td><%= link_to "Удалить", i, method: :delete, data: {confirm: "Удалить?"} %></td>
+          </tr>
+
+      <% end %>
+    </table>
 <% end %>

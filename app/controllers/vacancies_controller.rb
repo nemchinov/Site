@@ -37,7 +37,9 @@ class VacanciesController < ApplicationController
 
   # /vacancy/1 DELETE
   def destroy
-
+    @vacancy=Vacancy.find(params[:id])
+    @vacancy.destroy
+    redirect_to action: "index"
   end
 
   # /vacancy/edit GET
