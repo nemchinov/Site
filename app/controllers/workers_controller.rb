@@ -7,7 +7,9 @@ class WorkersController < ApplicationController
 
   # /workers/workers POST
   def create
-    @worker = Worker.create(name: params[:name],contacts: params[:contacts], status: params[:status], solaryDesire: params[:solaryDesire])
+    item_params = params.require(:worker).permit(:name,:contacts,:status,:solaryDesire)
+    @worker = Worker.create(item_params)
+    #@worker = Worker.create(name: params[:name],contacts: params[:contacts], status: params[:status], solaryDesire: params[:solaryDesire])
     if @worker.errors.empty?
       redirect_to worker_path(@worker)
     else
