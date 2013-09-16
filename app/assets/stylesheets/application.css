@@ -15,7 +15,7 @@ q, .sideBox a, .sideBox span, #footer
 
 #bodyText {
     line-height: 1.5em;
-    margin: 10mm 13em 0 13em;
+    margin: 10mm 3em 0 3em;
     padding: 0 1em 1ex 1em;
 }
 
@@ -42,7 +42,11 @@ h1 {
     border-bottom: 1px solid;
     padding-bottom: 0.5ex;
 }
-
+h2 {
+    font-weight: bold;
+    font-size: 80%;
+    text-align: right;
+}
 /* ###### Header ###### */
 
 #header {

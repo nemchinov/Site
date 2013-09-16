@@ -1,6 +1,10 @@
 <h1><%=@vacancy.title%></h1>
 
+<h2><%= link_to '[Изменить данные вакансии]', edit_vacancy_path(@vacancy) %></h2>
+
 <ul>
   <li>Зарплата: <%= @vacancy.salary%></li>
   <li>Информация: <%= @vacancy.information%></li>
 </ul>
+
+<p><%= link_to "Назад", vacancies_path %></p>

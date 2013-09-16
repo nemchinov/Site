@@ -2,23 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="800a73cc-9d57-4edc-8b6f-ba979439bde6" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Alex\RubymineProjects\Site\app\views\ability\edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Alex\RubymineProjects\Site\app\views\ability\index.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Alex\RubymineProjects\Site\app\views\ability\new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Alex\RubymineProjects\Site\app\views\ability\show.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/skills_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/skills_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/vacancies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/vacancies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/workers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/workers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vacancies/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/vacancies/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workers/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/workers/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vacancies/index.html.erb" afterPath="$PROJECT_DIR$/app/views/vacancies/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/workers/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vacancies/new.html.erb" afterPath="$PROJECT_DIR$/app/views/vacancies/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workers/new.html.erb" afterPath="$PROJECT_DIR$/app/views/workers/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/vacancies/show.html.erb" afterPath="$PROJECT_DIR$/app/views/vacancies/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/workers/show.html.erb" afterPath="$PROJECT_DIR$/app/views/workers/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Site.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/database.yml" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1378409153515" ignored="false" />
     <file path="/Ruby Console" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1378723251956" ignored="false" />
-    <file path="/Dummy.txt" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379268162129" ignored="false" />
+    <file path="/Dummy.txt" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379320312740" ignored="false" />
     <file path="/20130908085534_create_vacancies.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1378634037817" ignored="false" />
     <file path="/schema.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1378634071731" ignored="false" />
     <file path="/20130908101905_add_index_to_vacancy.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1378635745279" ignored="false" />
@@ -33,9 +32,9 @@
     <file path="/skill_controller.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379257002524" ignored="false" />
     <file path="/new.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379063804116" ignored="false" />
     <file path="/edit.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379058449921" ignored="false" />
-    <file path="/show.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379249080639" ignored="false" />
-    <file path="/index.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379268049166" ignored="false" />
-    <file path="/new.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379257311438" ignored="false" />
+    <file path="/show.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379322501998" ignored="false" />
+    <file path="/index.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379321169537" ignored="false" />
+    <file path="/new.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379321774478" ignored="false" />
     <file path="/edit.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379267823670" ignored="false" />
     <file path="/a.dummy" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379247101291" ignored="false" />
     <file path="/ability.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379248625406" ignored="false" />
@@ -44,6 +43,7 @@
     <file path="/temp.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379256850487" ignored="false" />
     <file path="/skills_controller.rb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379268997843" ignored="false" />
     <file path="/application.html.erb" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379319946082" ignored="false" />
+    <file path="/application.css" changelist="800a73cc-9d57-4edc-8b6f-ba979439bde6" time="1379320958639" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,22 +84,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/skill_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/skill/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/workers/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/vacancies/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/workers/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/vacancies/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/workers/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/skills/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/skills/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/vacancies/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/skills_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/vacancies_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/workers_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+        <option value="$PROJECT_DIR$/app/views/workers/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/vacancies/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/workers/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/vacancies/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/workers/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/vacancies/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/workers/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/vacancies/show.html.erb" />
       </list>
     </option>
   </component>
@@ -744,7 +744,11 @@
       <created>1379268167152</created>
       <updated>1379268167152</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="16.09_CSS_Layouts">
+      <created>1379320316955</created>
+      <updated>1379320316955</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -772,12 +776,12 @@
     <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.67096776" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44193548" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30227274" sideWeight="0.32903227" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30227274" sideWeight="0.5580645" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -833,7 +837,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="15.09_All_Controll_And_View(Add,Edit,View + Delete)" />
+    <option name="LAST_COMMIT_MESSAGE" value="16.09_CSS_Layouts" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -855,32 +859,12 @@
     <MESSAGE value="15.09_All_Controll_And_View" />
     <MESSAGE value="15.09_All_Controll_And_View(Add,Edit,View)" />
     <MESSAGE value="15.09_All_Controll_And_View(Add,Edit,View + Delete)" />
+    <MESSAGE value="16.09_CSS_Layouts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/skills/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="18" selection-start="159" selection-end="159" vertical-scroll-proportion="0.1880531">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/skills/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="18" selection-start="475" selection-end="475" vertical-scroll-proportion="0.789823">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/vacancy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -888,23 +872,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/vacancies/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="60" selection-start="334" selection-end="334" vertical-scroll-proportion="0.54867256">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/skills_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="30" selection-start="445" selection-end="445" vertical-scroll-proportion="0.51829267">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/vacancies_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="32" selection-start="1089" selection-end="1089" vertical-scroll-proportion="0.58536583">
           <folding />
         </state>
       </provider>
@@ -930,44 +900,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/workers/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="38" selection-start="376" selection-end="376" vertical-scroll-proportion="0.30177516">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/workers/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="88" selection-start="503" selection-end="503" vertical-scroll-proportion="0.67061144">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/workers/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/workers/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="18" column="4" selection-start="622" selection-end="662" vertical-scroll-proportion="0.50530785">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="614" selection-end="614" vertical-scroll-proportion="-1.5309569">
+        <state line="47" column="22" selection-start="1017" selection-end="1017" vertical-scroll-proportion="0.61569417">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/vacancies/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="26" selection-start="518" selection-end="518" vertical-scroll-proportion="-0.37475345">
+        <state line="22" column="14" selection-start="549" selection-end="549" vertical-scroll-proportion="0.7940552">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vacancies/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="388" selection-end="388" vertical-scroll-proportion="0.3970276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/workers/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="35" selection-start="413" selection-end="413" vertical-scroll-proportion="0.3970276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/workers/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="424" selection-end="424" vertical-scroll-proportion="0.3970276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vacancies/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="36" selection-start="403" selection-end="403" vertical-scroll-proportion="0.3970276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/workers/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="20" selection-end="83" vertical-scroll-proportion="0.036093418">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/workers/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="28" selection-end="108" vertical-scroll-proportion="0.072186835">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/vacancies_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="35" selection-start="927" selection-end="927" vertical-scroll-proportion="0.3420523">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/vacancies/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="40" selection-start="258" selection-end="258" vertical-scroll-proportion="0.32484075">
           <folding />
         </state>
       </provider>
