@@ -1,4 +1,7 @@
 class SkillsController < ApplicationController
+
+  before_filter :find_skill, only: [:show, :edit, :update, :destroy]
+
   def index
     @skill = Skill.all
   end
@@ -16,7 +19,7 @@ class SkillsController < ApplicationController
 
   # /skills/1 GET
   def show
-    if (@skill = Skill.where(id: params[:id]).first)
+    if (@skill)
       render "skills/show"
     else
       render text: "Page not found", status: 404
@@ -25,7 +28,6 @@ class SkillsController < ApplicationController
 
   # /skills/1 PUT
   def update
-    @skill = Skill.find(params[:id])
     item_params = params.require(:skill).permit(:name)
     @skill.update_attributes(item_params)
     if @skill.errors.empty?
@@ -37,19 +39,23 @@ class SkillsController < ApplicationController
 
   # /skills/1 DELETE
   def destroy
-    @skill=Skill.find(params[:id])
     @skill.destroy
     redirect_to action: "index"
   end
 
   # /skills/edit GET
   def edit
-    @skill = Skill.find(params[:id])
   end
 
   # /skills/new GET
   def new
-       @skill = Skill.new
+    @skill = Skill.new
+  end
+
+  private
+
+  def find_skill
+    @skill = Skill.find(params[:id])
   end
 
 end

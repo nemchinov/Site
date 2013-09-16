@@ -1,4 +1,7 @@
 class VacanciesController < ApplicationController
+
+  before_filter :find_vacancy, only: [:show, :edit, :update, :destroy]
+
   def index
      @vacancy = Vacancy.all
   end
@@ -16,7 +19,7 @@ class VacanciesController < ApplicationController
 
   # /vacancy/1 GET
   def show
-    if (@vacancy = Vacancy.where(id: params[:id]).first)
+    if (@vacancy)
       render "vacancies/show"
     else
       render text: "Page not found", status: 404
@@ -25,7 +28,6 @@ class VacanciesController < ApplicationController
 
   # /vacancy/1 PUT
   def update
-    @vacancy = Vacancy.find(params[:id])
     item_params = params.require(:vacancy).permit(:title, :salary, :duration, :information)
     @vacancy.update_attributes(item_params)
     if @vacancy.errors.empty?
@@ -37,18 +39,20 @@ class VacanciesController < ApplicationController
 
   # /vacancy/1 DELETE
   def destroy
-    @vacancy=Vacancy.find(params[:id])
     @vacancy.destroy
     redirect_to action: "index"
   end
 
   # /vacancy/edit GET
   def edit
-    @vacancy = Vacancy.find(params[:id])
   end
 
   # /vacancy/new GET
   def new
-      @vacancy=Vacancy.new
+    @vacancy=Vacancy.new
+  end
+
+  def find_vacancy
+    @vacancy = Vacancy.find(params[:id])
   end
 end

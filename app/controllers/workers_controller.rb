@@ -1,4 +1,7 @@
 class WorkersController < ApplicationController
+
+  before_filter :find_worker, only: [:show, :edit, :update, :destroy]
+
   def index
     @workers = Worker.all
     #render text: "Workers: <br/>" + @worker.map {|i| "#{i.name}: #{i.contacts}: #{i.status}: #{i.solaryDesire}"}.join("<br/>")
@@ -20,7 +23,7 @@ class WorkersController < ApplicationController
 
   # /workers/1 GET
   def show
-    if (@worker = Worker.where(id: params[:id]).first)
+    if (@worker)
       render "workers/show"
     else
       render text: "Page not found", status: 404
@@ -29,7 +32,6 @@ class WorkersController < ApplicationController
 
   # /workers/1 PUT
   def update
-    @worker = Worker.find(params[:id])
     item_params = params.require(:worker).permit(:name,:contacts,:status,:solaryDesire)
     @worker.update_attributes(item_params)
     if @worker.errors.empty?
@@ -41,18 +43,27 @@ class WorkersController < ApplicationController
 
   # /workers/1 DELETE
   def destroy
-    @worker=Worker.find(params[:id])
     @worker.destroy
     redirect_to action: "index"
   end
 
   # /workers/edit GET
   def edit
-     @worker = Worker.find(params[:id])
   end
 
   # /workers/new GET
   def new
-      @worker=Worker.new
+    @worker=Worker.new
+  end
+
+  def find_vacancies
+    @vacancy=Vacancy.where("duration > 0")
+    render "index"
+  end
+
+  private
+
+  def find_worker
+    @worker = Worker.find(params[:id])
   end
 end

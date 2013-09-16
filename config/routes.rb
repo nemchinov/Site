@@ -1,6 +1,11 @@
 Site::Application.routes.draw do
-  resources :workers, :vacancies
+  resources :workers do
+     get :find_vacancies, on: :collection
+  end
+  resources :vacancies
   resources :skills
+
+  root "workers#index"
 
   #get ':controller(/:action(/:id))(.:format)'
 

@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Site</title>
+  <title>Recruitment agency</title>
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="application.css" title="Recruitment Agency Stylesheet" />
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="top"></div>
 
+<!-- ###### Header ###### -->
+
+<div id="header">
+  <span class="headerTitle">Добро пожаловать!</span>
+  <div class="headerLinks">
+    <%= link_to 'Работники', workers_path %>
+    <%= link_to 'Вакансии', vacancies_path %>
+    <span>Кадровое агентство</span>
+  </div>
+</div>
+
+<!-- ###### Body ###### -->
+<div id="bodyText">
 <%= yield %>
+</div>
+<p>
+
+
+</p>
+<!-- ###### Footer ###### -->
+
+<div><div id="footer">
+  <div>
+    <strong>Author: </strong>
+    <a class="footerCol2" href="mailto:nemchinov.91@yandex.ru"
+       title="Email author">Alexandr</a>
+  </div>
+
+  <div>
+    <strong>Modified: </strong>
+    <span class="footerCol2">16-09-2013</span>
+  </div>
+</div></div>
 
 </body>
 </html>
