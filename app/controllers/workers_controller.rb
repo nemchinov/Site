@@ -1,7 +1,7 @@
 # encoding: utf-8
 class WorkersController < ApplicationController
 
-  before_filter :find_worker, only: [:show, :edit, :update, :destroy]
+  before_filter :find_worker, only: [:show, :edit, :update, :destroy, :search]
 
   def index
     @workers = Worker.all
@@ -65,6 +65,27 @@ class WorkersController < ApplicationController
   def find_vacancies
     @vacancy=Vacancy.where("duration > 0")
     render "index"
+  end
+
+  def search
+  end
+
+  def AddSkill
+    skill_id=params[:id].split('_')[1]
+    worker_id=params[:id].split('_')[0]
+    puts skill_id
+    puts worker_id
+    @skill = Skill.where(id: skill_id).first
+    @worker = Worker.where(id: worker_id).first
+    @worker.skills.push(@skill)
+  end
+
+  def RemoveSkill
+    skill_id=params[:id].split('_')[1]
+    worker_id=params[:id].split('_')[0]
+    @skill = Skill.where(id: skill_id).first
+    @worker = Worker.where(id: worker_id).first
+    @worker.skills.delete(@skill)
   end
 
   private

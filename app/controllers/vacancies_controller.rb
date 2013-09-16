@@ -1,3 +1,4 @@
+# encoding: utf-8
 class VacanciesController < ApplicationController
 
   before_filter :find_vacancy, only: [:show, :edit, :update, :destroy]
@@ -53,6 +54,26 @@ class VacanciesController < ApplicationController
     @vacancy=Vacancy.new
   end
 
+  def search
+  end
+
+  def AddSkill
+    skill_id=params[:id].split('_')[1]
+    vacancy_id=params[:id].split('_')[0]
+    @skill = Skill.where(id: skill_id).first
+    @vacancy = Vacancy.where(id: vacancy_id).first
+    @vacancy.skills.push(@skill)
+  end
+
+  def RemoveSkill
+    skill_id=params[:id].split('_')[1]
+    vacancy_id=params[:id].split('_')[0]
+    @skill = Skill.where(id: skill_id).first
+    @vacancy = Vacancy.where(id: vacancy_id).first
+    @vacancy.skills.delete(@skill)
+  end
+
+  private
   def find_vacancy
     @vacancy = Vacancy.find(params[:id])
   end

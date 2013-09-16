@@ -1,0 +1,23 @@
+<h1><%= link_to @worker.name, workers_path(@worker.id) %></h1>
+
+<h3>Полное совпадение навыков</h3>
+
+<ul>
+  <% vacancies = Vacancy.all %>
+  <% vacancies.sort_by{|e| -e[:salary]}.each do |i|%>
+      <% if i.skills == @worker.skills && i.created_at + i.duration*86400 > Date.today %>
+          <li><%= link_to i.title, vacancy_path(i) %></li>
+      <% end %>
+  <% end %>
+</ul>
+
+<h3>Частичное совпадение навыков</h3>
+
+<ul>
+  <% vacancy = Vacancy.includes(:skills).where('skills.id' => @worker.skills).order('salary DESC') %>
+
+
+  <% vacancy.each do |i| %>
+      <li><%= link_to i.title, vacancy_path(i) %></li>
+  <% end %>
+</ul>

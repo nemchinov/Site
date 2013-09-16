@@ -1,8 +1,14 @@
 Site::Application.routes.draw do
   resources :workers do
-     get :find_vacancies, on: :collection
+     get :search, on: :member
+     get :AddSkill, on: :member
+     get :RemoveSkill, on: :member
   end
-  resources :vacancies
+  resources :vacancies do
+      get :AddSkill, on: :member
+      get :RemoveSkill, on: :member
+      get :search, on: :member
+  end
   resources :skills
 
   root "workers#index"
