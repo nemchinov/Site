@@ -1,10 +1,10 @@
 <h1>Изменение данных работника</h1>
 
 <%= form_for (@worker) do |f| %>
-    <p>Имя: <br/> <%= f.text_field :name %></p>
-    <p>Контактные данные: <br/> <%= f.text_field :contacts %></p>
+    <p>Имя: <br/> <%= f.text_area :name, size: "60x1" %></p>
+    <p>Контактная информация: <br/> <%= f.text_area :contacts, size: "60x1" %></p>
     <p>Статус поиска работы: <br/> <%= f.check_box :status %></p>
-    <p>Желаемая зработная плата: <br/> <%= f.text_field :solaryDesire %></p>
+    <p>Желаемая зработная плата: <br/> <%= f.text_area :solaryDesire, size: "60x6" %></p>
 
     <p><%= f.submit "Применить" %></p>
 <% end %>

@@ -1,3 +1,4 @@
+# encoding: utf-8
 class WorkersController < ApplicationController
 
   before_filter :find_worker, only: [:show, :edit, :update, :destroy]
@@ -24,6 +25,11 @@ class WorkersController < ApplicationController
   # /workers/1 GET
   def show
     if (@worker)
+      if(@worker.status)
+        @status="да"
+      else
+        @status="нет"
+      end
       render "workers/show"
     else
       render text: "Page not found", status: 404

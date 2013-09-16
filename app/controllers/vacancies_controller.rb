@@ -20,6 +20,7 @@ class VacanciesController < ApplicationController
   # /vacancy/1 GET
   def show
     if (@vacancy)
+      @time = @vacancy.created_at + @vacancy.duration*86400
       render "vacancies/show"
     else
       render text: "Page not found", status: 404

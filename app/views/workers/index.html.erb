@@ -15,7 +15,11 @@
           <tr>
             <td><%= i.id %></td>
             <td><%= link_to i.name, worker_path(i) %></td>
-            <td><%= i.status %></td>
+            <% if(i.status)%>
+                <td>да</td>
+            <% else %>
+                <td>нет</td>
+            <% end %>
             <td><%= link_to "Удалить", i, method: :delete, data: {confirm: "Удалить?"} %></td>
           </tr>
 

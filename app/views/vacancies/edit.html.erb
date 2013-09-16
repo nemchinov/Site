@@ -1,10 +1,10 @@
 <h1>Изменение вакансии.</h1>
 
 <%= form_for (@vacancy) do |f| %>
-    <p>Название: <br/> <%= f.text_field :title %></p>
-    <p>Зарплата: <br/> <%= f.text_field :salary %></p>
-    <p>Продолжительность: <br/> <%= f.text_field :duration %></p>
-    <p>Информация: <br/> <%= f.text_field :information %></p>
+    <p>Название: <br/> <%= f.text_area :title, size: "60x1" %></p>
+    <p>Зарплата: <br/> <%= f.text_area :salary, size: "60x1" %></p>
+    <p>Срок действия (в днях): <br/> <%= f.text_area :duration, size: "60x1"%></p>
+    <p>Контактная информация: <br/> <%= f.text_area :information, size: "60x6" %></p>
 
     <p><%= f.submit "Применить" %></p>
 <% end %>

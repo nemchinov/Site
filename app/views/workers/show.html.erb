@@ -3,9 +3,9 @@
 <h2><%= link_to '[Изменить данные работника]', edit_worker_path(@worker) %></h2>
 
 <ul>
-  <li>Контакты: <%= @worker.contacts%></li>
+  <li>Контактная информация: <%= @worker.contacts%></li>
   <li>Желаемая заработная плата: <%= @worker.solaryDesire%></li>
-  <li>Ищет работу: <%= @worker.status %></li>
+  <li>Ищет работу: <%= @status %></li>
 </ul>
 
 <p><%= link_to "Назад", workers_path %></p>
