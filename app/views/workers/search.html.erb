@@ -1,6 +1,6 @@
 <h1><%= link_to @worker.name, workers_path(@worker.id) %></h1>
 
-<h3>Полное совпадение навыков</h3>
+<h4>Полное совпадение навыков</h4>
 
 <ul>
   <% vacancies = Vacancy.all %>
@@ -11,7 +11,7 @@
   <% end %>
 </ul>
 
-<h3>Частичное совпадение навыков</h3>
+<h4>Частичное совпадение навыков</h4>
 
 <ul>
   <% vacancy = Vacancy.includes(:skills).where('skills.id' => @worker.skills).order('salary DESC') %>

@@ -10,6 +10,32 @@ q, h2,  #header, .sideBox, .sideBox div, #footer
 q, .sideBox a, .sideBox span, #footer
 { /* Background Color (lighter): */  background-color: #fcfcff; }
 
+/* ###### Body Table ###### */
+table
+{
+    border-width: 1px;
+    border-color: #a0a0ff;
+    border-style: solid;
+    text-align: left;
+    width: 80%;
+    color: darkslateblue;
+}
+td
+{
+    border-width: 1px;
+    border-color: #a0a0ff;
+    border-style: solid;
+    margin: 0 0 0 0;
+    padding: 5px 5px 5px 5px;
+}
+th
+{
+    border-width: 1px;
+    border-color: #a0a0ff;
+    border-style: solid;
+    margin: 0 0 0 0;
+    padding: 5px 5px 5px 5px;
+}
 
 /* ###### Body Text ###### */
 
@@ -32,20 +58,38 @@ body {
     margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5 {
     font-family: "trebuchet ms", tahoma, sans-serif;
+    font-weight: bold;
 }
 
 h1 {
-    font-weight: bold;
     font-size: 150%;
     border-bottom: 1px solid;
     padding-bottom: 0.5ex;
 }
 h2 {
-    font-weight: bold;
+
     font-size: 80%;
     text-align: right;
+}
+h3 {
+    font-size: 120%;
+    text-align: left;
+    color: red;
+}
+h4 {
+    font-size: 120%;
+    text-align: left;
+    color: green;
+}
+li {
+    color: darkslateblue;
+}
+h4 {
+    font-size: 120%;
+    text-align: left;
+    color: darkblue;
 }
 /* ###### Header ###### */
 

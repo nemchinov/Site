@@ -2,12 +2,48 @@
 
 <%= form_for (@worker) do |f| %>
     <p>Имя: <br/> <%= f.text_area :name, size: "60x1" %></p>
-    <p>Контактная информация: <br/> <%= f.text_area :contacts, size: "60x1" %></p>
+    <p>Желаемая зработная плата: <br/> <%= f.text_area :solaryDesire, size: "60x1" %></p>
     <p>Статус поиска работы: <br/> <%= f.check_box :status %></p>
-    <p>Желаемая зработная плата: <br/> <%= f.text_area :solaryDesire, size: "60x6" %></p>
+    <p>Контактная информация: <br/> <%= f.text_area :contacts, size: "60x4" %></p>
 
     <p><%= f.submit "Добавить работника" %></p>
 <% end %>
 
 <p><%= link_to "Назад", :back %></p>
+
+<h2>Навыки</h2>
+<button onclick="$('#skills').show();">+</button>
+
+<div id="skills" style="display: none">
+  <select id = "selectedSkill" >
+    <% Skill.all.each do |item| %>
+        <option value = "<%= item.id %>" > <%= item.name %></option>
+    <% end %>
+  </select>
+  <button onclick= add(selectedSkill.value)>OK</button>
+</div>
+
+<ul>
+  <% if @worker.skills.empty? %>
+      <p>Отсутствуют</p>
+  <% else %>
+      <% @worker.skills.each do |i| %>
+          <li><%= i.name %><button onclick="remove(<%= i.id %>)">-</button></li>
+      <% end %>
+  <% end %>
+</ul>
+
+<script>
+    function add(id)
+    {
+        $.get('/workers/<%= @worker.id %>_'+id+'/AddSkill');
+        location.reload();
+    }
+    function remove(id)
+    {
+        $.get('/workers/<%= @worker.id %>_'+id+'/RemoveSkill');
+        while(_requestComplite)
+            location.reload();
+    }
+</script>
 

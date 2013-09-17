@@ -24,7 +24,10 @@
 
 <!-- ###### Body ###### -->
 <div id="bodyText">
-<%= yield %>
+  <h3><%= flash[:error] %></h3>
+  <h4><%= flash[:success] %></h4>
+  <%= yield %>
+
 </div>
 <p>
 

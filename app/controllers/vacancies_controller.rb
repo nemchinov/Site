@@ -12,8 +12,10 @@ class VacanciesController < ApplicationController
     item_params = params.require(:vacancy).permit(:title, :salary, :duration, :information)
     @vacancy = Vacancy.create(item_params)
     if @vacancy.errors.empty?
+      flash[:success] = "Добавление прошло успешно."
       redirect_to vacancy_path(@vacancy)
     else
+      flash.now[:error] = "Вы допустили ошибку в заполнении формы! Пожалуйста исправьте её."
       render "new"
     end
   end
@@ -33,8 +35,10 @@ class VacanciesController < ApplicationController
     item_params = params.require(:vacancy).permit(:title, :salary, :duration, :information)
     @vacancy.update_attributes(item_params)
     if @vacancy.errors.empty?
+      flash[:success] = "Добавление прошло успешно."
       redirect_to vacancy_path(@vacancy)
     else
+      flash.now[:error] = "Вы допустили ошибку в заполнении формы! Пожалуйста исправьте её."
       render "edit"
     end
   end

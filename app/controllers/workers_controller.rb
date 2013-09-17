@@ -14,8 +14,10 @@ class WorkersController < ApplicationController
     @worker = Worker.create(item_params)
     #@worker = Worker.create(name: params[:name],contacts: params[:contacts], status: params[:status], solaryDesire: params[:solaryDesire])
     if @worker.errors.empty?
+      flash[:success] = "Добавление прошло успешно."
       redirect_to worker_path(@worker)
     else
+      flash.now[:error] = "Вы допустили ошибку в заполнении формы! Пожалуйста исправьте её."
       render "new"
     end
     #render text: "#{@worker.id}: #{@worker.name} (#{!@worker.new_record?})"
@@ -41,8 +43,10 @@ class WorkersController < ApplicationController
     item_params = params.require(:worker).permit(:name,:contacts,:status,:solaryDesire)
     @worker.update_attributes(item_params)
     if @worker.errors.empty?
+      flash[:success] = "Изменение данных прошло успешно."
       redirect_to worker_path(@worker)
     else
+      flash.now[:error] = "Вы допустили ошибку в заполнении формы! Пожалуйста исправьте её."
       render "edit"
     end
   end
