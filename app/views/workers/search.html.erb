@@ -1,6 +1,6 @@
 <h1><%= link_to @worker.name, workers_path(@worker.id) %></h1>
 
-<h4>Полное совпадение навыков</h4>
+<h5>Полное совпадение навыков</h5>
 
 <ul>
   <% vacancies = Vacancy.all %>
@@ -11,13 +11,13 @@
   <% end %>
 </ul>
 
-<h4>Частичное совпадение навыков</h4>
+<h5>Частичное совпадение навыков</h5>
 
 <ul>
   <% vacancy = Vacancy.includes(:skills).where('skills.id' => @worker.skills).order('salary DESC') %>
-
-
   <% vacancy.each do |i| %>
+      <% if !(i.created_at + i.duration*86400 > Date.today) %>
       <li><%= link_to i.title, vacancy_path(i) %></li>
+      <% end %>
   <% end %>
 </ul>

@@ -1,12 +1,45 @@
 <h1><%=@vacancy.title%></h1>
 
-<h2><%= link_to '[Изменить данные вакансии]', edit_vacancy_path(@vacancy) %></h2>
+<h2><%= link_to '[Искать подходящих работников]', search_vacancy_path %>   <%= link_to '[Изменить данные вакансии]', edit_vacancy_path(@vacancy) %></h2>
 
 <ul>
   <li>Дата добавления: <%= @vacancy.created_at %></li>
   <li>Срок действия до: <%= @time %></li>
   <li>Зарплата: <%= @vacancy.salary%></li>
   <li>Контактная информация: <%= @vacancy.information%></li>
+  <li>Требуемые навыки:</li>
+  <ul>
+    <% if @vacancy.skills.empty? %>
+        <p>Отсутствуют</p>
+    <% else %>
+        <% @vacancy.skills.each do |i| %>
+            <li><%= i.name %><button onclick="remove(<%= i.id %>)">-</button></li>
+        <% end %>
+    <% end %>
+  </ul>
+  <button onclick="$('#skills').show();">+</button>
+
+  <div id="skills" style="display: none">
+    <select id = "selectedSkill" >
+      <% Skill.all.each do |item| %>
+          <option value = "<%= item.id %>" > <%= item.name %></option>
+      <% end %>
+    </select>
+    <button onclick= add(selectedSkill.value)>OK</button>
+  </div>
 </ul>
 
 <p><%= link_to "Назад", vacancies_path %></p>
+
+<script>
+    function add(id)
+    {
+        var res = $.get('/vacancies/<%= @vacancy.id %>_'+id+'/AddSkill')
+            .complete(function(){location.reload();});
+    }
+    function remove(id)
+    {
+        var res = $.get('/vacancies/<%= @vacancy.id %>_'+id+'/RemoveSkill')
+                .complete(function(){location.reload();});
+    }
+</script>

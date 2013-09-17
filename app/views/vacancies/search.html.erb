@@ -1,0 +1,21 @@
+<h5><%= link_to @vacancy.title, vacancy_path(@vacancy.id) %></h5>
+
+<h5>Полное совпадение навыков</h5>
+
+<ul>
+  <% workers = Worker.all %>
+  <% workers.each do |i|%>
+      <% if i.skills == @vacancy.skills %>
+          <li><%= link_to i.name, worker_path(i) %></li>
+      <% end %>
+  <% end %>
+</ul>
+
+<h5>Частичное совпадение навыков</h5>
+
+<ul>
+  <% worker = Worker.includes(:skills).where('skills.id' => @vacancy.skills) %>
+  <% worker.each do |i| %>
+      <li><%= link_to i.name, worker_path(i) %></li>
+  <% end %>
+</ul>

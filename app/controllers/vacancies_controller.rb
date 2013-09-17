@@ -1,7 +1,7 @@
 # encoding: utf-8
 class VacanciesController < ApplicationController
 
-  before_filter :find_vacancy, only: [:show, :edit, :update, :destroy]
+  before_filter :find_vacancy, only: [:show, :edit, :update, :destroy, :search]
 
   def index
      @vacancy = Vacancy.all
@@ -66,7 +66,10 @@ class VacanciesController < ApplicationController
     vacancy_id=params[:id].split('_')[0]
     @skill = Skill.where(id: skill_id).first
     @vacancy = Vacancy.where(id: vacancy_id).first
-    @vacancy.skills.push(@skill)
+    l = @vacancy.skills.where(id: skill_id).first
+    if (!l)
+      @vacancy.skills.push(@skill)
+    end
   end
 
   def RemoveSkill

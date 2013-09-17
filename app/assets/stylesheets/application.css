@@ -1,5 +1,5 @@
 .topOfPage, q, h1, h2, h3, .headerTitle, .headerLinks, .headerLinks *, .sideBox div, #footer *
-{ /* Text Color: */  color: #a0a0ff; }
+{ /* Text Color: */  color: darkslateblue; }
 
 q, h2,  #header, .sideBox, .sideBox div, #footer
 { /* Border Color: */  border-color: #c0c0ff; }
@@ -86,7 +86,7 @@ h4 {
 li {
     color: darkslateblue;
 }
-h4 {
+h5 {
     font-size: 120%;
     text-align: left;
     color: darkblue;

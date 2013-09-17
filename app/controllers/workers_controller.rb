@@ -81,7 +81,10 @@ class WorkersController < ApplicationController
     puts worker_id
     @skill = Skill.where(id: skill_id).first
     @worker = Worker.where(id: worker_id).first
-    @worker.skills.push(@skill)
+    l = @worker.skills.where(id: skill_id).first
+    if (!l)
+      @worker.skills.push(@skill)
+    end
   end
 
   def RemoveSkill

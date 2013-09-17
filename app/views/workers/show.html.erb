@@ -12,26 +12,48 @@
         <p>Отсутствуют</p>
     <% else %>
         <% @worker.skills.each do |i| %>
-            <li><%= i.name %></button></li>
+            <li><%= i.name %><button onclick="remove(<%= i.id %>)">-</button></li>
         <% end %>
     <% end %>
   </ul>
+  <button onclick="$('#skills').show();">+</button>
 
+  <div id="skills" style="display: none">
+    <select id = "selectedSkill" >
+      <% Skill.all.each do |item| %>
+          <option value = "<%= item.id %>" > <%= item.name %></option>
+      <% end %>
+    </select>
+    <button onclick= add(selectedSkill.value)>OK</button>
+    <button onclick="$('#adds').show();">Добавить</button>
+    <div id="adds" style="display: none">
+          <p><input type =text name="enter" class="enter" value="" id="skill">
+          <button onclick="add_skill()">Добавить</button></p>
+    </div>
+  </div>
 </ul>
 
 <p><%= link_to "Назад", workers_path %></p>
 
+
+
 <script>
     function add(id)
     {
-        $.get('/workers/<%= @worker.id %>_'+id+'/AddSkill');
-        location.reload();
+        var res = $.get('/workers/<%= @worker.id %>_'+id+'/AddSkill')
+            .complete(function(){location.reload();});
     }
     function remove(id)
     {
-        $.get('/workers/<%= @worker.id %>_'+id+'/RemoveSkill');
-        while(_requestComplite)
-            location.reload();
+        var res = $.get('/workers/<%= @worker.id %>_'+id+'/RemoveSkill')
+            .complete(function(){location.reload();});
+    }
+    function add_skill()
+    {
+        var sk = $('#skill')
+        var res = $.get('/skills/create?name='+sk.val())
+                .complete(function(){location.reload();});
+        $('#skills').show();
     }
 </script>
 
