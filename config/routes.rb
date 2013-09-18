@@ -3,11 +3,13 @@ Site::Application.routes.draw do
      get :search, on: :member
      get :AddSkill, on: :member
      get :RemoveSkill, on: :member
+     get :SetSkill, on: :member
   end
   resources :vacancies do
       get :AddSkill, on: :member
       get :RemoveSkill, on: :member
       get :search, on: :member
+      get :SetSkill, on: :member
   end
   resources :skills
 

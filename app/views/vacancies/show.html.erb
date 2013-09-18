@@ -17,15 +17,19 @@
         <% end %>
     <% end %>
   </ul>
-  <button onclick="$('#skills').show();">+</button>
 
-  <div id="skills" style="display: none">
+  <div id="skills">
     <select id = "selectedSkill" >
       <% Skill.all.each do |item| %>
           <option value = "<%= item.id %>" > <%= item.name %></option>
       <% end %>
     </select>
     <button onclick= add(selectedSkill.value)>OK</button>
+    <button onclick="$('#adds').show();">Добавить новое умение</button>
+    <div id="adds" style="display: none">
+      <p><input type =text name="enter" class="enter" value="" id="skill">
+        <button onclick="add_skill()">Добавить</button></p>
+    </div>
   </div>
 </ul>
 
@@ -41,5 +45,12 @@
     {
         var res = $.get('/vacancies/<%= @vacancy.id %>_'+id+'/RemoveSkill')
                 .complete(function(){location.reload();});
+    }
+    function add_skill()
+    {
+        var sk = $('#skill')
+        var res = $.get('/vacancies/' + sk.val()+'/SetSkill')
+                .complete(function(){location.reload();});
+        $('#skills').show();
     }
 </script>

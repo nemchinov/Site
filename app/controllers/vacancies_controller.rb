@@ -80,6 +80,14 @@ class VacanciesController < ApplicationController
     @vacancy.skills.delete(@skill)
   end
 
+  def SetSkill
+    skill_name=params[:id]
+    sk = Skill.new
+    sk.name = skill_name
+    sk.save
+    return 0
+  end
+
   private
   def find_vacancy
     @vacancy = Vacancy.find(params[:id])
